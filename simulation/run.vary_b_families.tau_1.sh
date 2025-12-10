@@ -21,19 +21,19 @@ DIR_BJK="results/vary_n/jackknife"
 mkdir -p $DIR_NORM $DIR_PERM $DIR_BJK logs
 
 # 1. Normal
-Rscript simulation/normal_simulation.R \
+Rscript simulation/normal.R \
   --n_families $current_n \
   --tau 1.0 \
   --out_dir $DIR_NORM
 
 # 2. Block Jackknife
-Rscript simulation/jackknife_simulation.R \
+Rscript simulation/jackknife.R \
   --n_families $current_n \
   --tau 1.0 \
   --out_dir $DIR_BJK
 
 # 3. Permutation
-Rscript simulation/permutation_simulation.R \
+Rscript simulation/permutation.R \
   --n_families $current_n \
   --tau 1.0 \
   --out_dir $DIR_PERM
