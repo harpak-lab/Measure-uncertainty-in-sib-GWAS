@@ -1,4 +1,6 @@
+plots/
 jackknife/
+permutation/
 normal_theory/
 vary_beta/
 vary_M/
