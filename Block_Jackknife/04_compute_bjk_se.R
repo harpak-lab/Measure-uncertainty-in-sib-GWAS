@@ -11,9 +11,9 @@ option_list <- list(
 
 opt <- parse_args(OptionParser(option_list=option_list))
 
-m <- 500
-d <- 500
-r <- opt$n_families - d
+m <- 500 # The number of resampling replicates
+d <- 500 # The Block Size: the number of families deleted in one Block Jackknife resampling replicate
+r <- opt$n_families - d # The number of remaining families after deleting d of them 
 
 dir.create(opt$out_dir, showWarnings = FALSE)
 bjk_list <- list()
